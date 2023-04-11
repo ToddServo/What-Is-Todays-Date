@@ -1,0 +1,23 @@
+name: GitHub Self-Updating Repository Demo
+
+on: [push]
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        # https://github.com/actions/checkout/tree/v3.0.2
+        uses: actions/checkout@v3
+      - name: Modify date and time
+        run: |
+          date > README.md
+          cat README.md
+      - name: Push to repository
+        run: |
+          git config --global user.name "ToddServo"
+          git config --global user.email "16764933+ToddServo@users.noreply.github.com"
+          now=$(date)
+          git add -A
+          git commit -m "Auto Push on $now"
+          git push
