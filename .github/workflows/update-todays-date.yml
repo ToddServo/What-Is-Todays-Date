@@ -9,6 +9,14 @@ jobs:
       - name: Check out repository code
         # https://github.com/actions/checkout/tree/v3.0.2
         uses: actions/checkout@v3
+      - name: Clear README and set text
+        run: |
+          cat README.md
+          echo "# What is Today's Date?" > README.md
+          echo "This repository keeps track of today's date." >> README.md
+          echo "* * *" >> README.md
+          echo " " >> README.md
+          echo "## The current date:  " >> README.md
       - name: Modify date and time
         run: |
           cat README.md
