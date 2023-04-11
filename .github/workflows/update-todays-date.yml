@@ -12,7 +12,7 @@ jobs:
       - name: Modify date and time
         run: |
           sed -i '$ d' README.md
-          echo " $(date +"%I:%M.%S") " > README.md
+          echo " $(date +"%m/%d/%Y") " >> README.md
           cat README.md
       - name: Push to repository
         run: |
