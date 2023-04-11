@@ -1,6 +1,19 @@
 name: GitHub Self-Updating Repository Demo
-# changes ddfdd
-on: [push]
+
+on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+    # The shortest interval you can run scheduled workflows is once every 5 minutes.
+    # Note: The schedule event can be delayed during periods of high loads of GitHub Actions workflow runs. 
+    # High load times include the start of every hour. 
+    # To decrease the chance of delay, schedule your workflow to run at a different time of the hour.
+    # Every 5 minutes.
+    # - cron: '*/5 * * * *'
+    # At the beginning of every day.
+    - cron: "*/15 * * * *"
+
+#on: [push]
+
 
 jobs:
   report:
@@ -21,6 +34,13 @@ jobs:
         run: |
           cat README.md
           echo " $(date +"%m/%d/%Y") " >> README.md
+          echo "  " >> README.md
+          echo "  " >> README.md
+          echo " TIME IS ALSO THIS: " >> README.md
+          echo "  " >> README.md
+          echo " $(date +"%I:%M.%S") "
+          echo "  " >> README.md
+          echo "  " >> README.md
           cat README.md
       - name: Push to repository
         run: |
