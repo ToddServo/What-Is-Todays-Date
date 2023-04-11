@@ -12,10 +12,6 @@ jobs:
       - name: Modify date and time
         run: |
           cat README.md
-          #sed -i '$ d' README.md
-          head -n -1 README.md > README.md
-          echo " " >> README.md
-          cat README.md
           echo " $(date +"%m/%d/%Y") " >> README.md
           cat README.md
       - name: Push to repository
