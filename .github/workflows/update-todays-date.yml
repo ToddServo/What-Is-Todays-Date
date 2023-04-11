@@ -33,12 +33,12 @@ jobs:
       - name: Modify date and time
         run: |
           cat README.md
-          echo " $(date +"%m/%d/%Y") " >> README.md
+          echo " $(date -d '-6 hour' +"%m/%d/%Y") " >> README.md
           echo "  " >> README.md
           echo "  " >> README.md
           echo " TIME IS ALSO THIS: " >> README.md
           echo "  " >> README.md
-          echo " $(date +"%I:%M.%S") " >> README.md
+          echo " $(date -d '-6 hour' +"%I:%M.%S") " >> README.md
           echo "  " >> README.md
           echo "  " >> README.md
           cat README.md
