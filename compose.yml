@@ -11,7 +11,7 @@ services:
       dockerfile: ./dockerfile
 #    command: make
 #    network_mode: none
-#    entrypoint: /home/app/entrypoint.sh
+    entrypoint: /home/app/entrypoint.sh
     container_name: ubuntu-lukesmith
     image: ubuntu22.04-luke
     tty: true
