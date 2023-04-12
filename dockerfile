@@ -61,12 +61,12 @@ RUN chmod 777 /home/app/entrypoint.sh
 # The `useradd` command provides a non-interactive way to create new users.
 # This isn't to be confused with the `adduser` command, which is a higher level wrapper over useradd.
 #RUN useradd -ms /bin/bash apprunner
-RUN useradd --user-group --create-home --shell /bin/false app
+# RUN useradd --user-group --create-home --shell /bin/false app
 
 # This user is then set as the default user for any further operations:
-USER app
+# USER app
 
-COPY entrypoint.sh /home/app/entrypoint.sh
+# COPY entrypoint.sh /home/app/entrypoint.sh
 
 # RUN chmod +x /home/app/entrypoint.sh
 
