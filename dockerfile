@@ -60,5 +60,9 @@ RUN useradd --user-group --create-home --shell /bin/false app
 USER app
 
 COPY entrypoint.sh /home/app/entrypoint.sh
+
 RUN chmod +x /home/app/entrypoint.sh
+
+ENTRYPOINT ["/home/app/entrypoint.sh" ]
+
 # RUN make
