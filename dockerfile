@@ -46,7 +46,14 @@ RUN apt-get update && \
 ENV TZ=America/Denver
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+RUN mkdir -p /home/app
+
 WORKDIR /home/app
+
+COPY entrypoint.sh /home/app/entrypoint.sh
+
+RUN chmod 777 /home/app/entrypoint.sh
+
 
 # RUN cd /project && wget https://github.com/LukeSmithxyz/md-website-cv/archive/refs/heads/master.zip && unzip master.zip && cd md-website-cv-master
 
