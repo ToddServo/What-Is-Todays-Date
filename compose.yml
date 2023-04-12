@@ -1,0 +1,22 @@
+
+version: '3'
+
+name: "lukesmith"
+
+services:
+
+  ubuntu-lukesmith:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+#    command: make
+#    network_mode: none
+#    entrypoint: /home/app/entrypoint.sh
+    container_name: ubuntu-lukesmith
+    image: ubuntu22.04-luke
+    tty: true
+#    working_dir: /home/app
+    volumes:
+      - .:/home/app
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
