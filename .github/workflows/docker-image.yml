@@ -20,5 +20,5 @@ jobs:
       run: docker compose --file compose.yml up --detach
     - name: Run the actual command
       run: docker exec -t ubuntu-lukesmith make
-    - name: If container failed
-      run: docker container run ubuntu22.04-luke make
+    - name: Show me what you got
+      run: ls -alh
