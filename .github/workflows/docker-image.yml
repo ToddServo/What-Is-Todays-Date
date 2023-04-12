@@ -15,4 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build --tag ubuntu22.04-luke --file dockerfile . && docker compose --file compose.yml up --detach
+      run: docker build --tag ubuntu22.04-luke --file dockerfile .
+    - name: Build the Docker container
+      run: docker compose --file compose.yml up --detach
+    - name: Run the actual command
+      run: docker exec -t ubuntu-lukesmith make
+    - name: If container failed
+      run: docker container run ubuntu22.04-luke make
