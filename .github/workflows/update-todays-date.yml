@@ -9,8 +9,8 @@ on:
     # To decrease the chance of delay, schedule your workflow to run at a different time of the hour.
     # Every 5 minutes.
     # - cron: '*/5 * * * *'
-    # Currently, every 15 min from commit.
-    - cron: "*/15 * * * *"
+    # Currently, every three days at 10:15am UTC.
+    - cron: "15 10 */3 * *"
 
 #on: [push]
 
