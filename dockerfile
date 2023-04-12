@@ -70,6 +70,6 @@ RUN chmod 777 /home/app/entrypoint.sh
 
 # RUN chmod +x /home/app/entrypoint.sh
 
-ENTRYPOINT ["/home/app/entrypoint.sh" ]
+# ENTRYPOINT ["/home/app/entrypoint.sh" ]
 
 # RUN make
