@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build --tag ubuntu22.04-luke --file dockerfile . && docker compose --file compose.yml up --build --force-recreate --detach
+      run: docker build --tag ubuntu22.04-luke --file dockerfile . && docker compose --file compose.yml up --detach
