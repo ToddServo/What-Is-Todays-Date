@@ -10,7 +10,7 @@ on:
     # Prime numbers are a good example for time of the hour: 3, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53
     # Example: every 5 minutes.
     # - cron: '*/5 * * * *'
-    # Currently: every three days at 10:21am UTC.
+    # Currently: every three days at 10:23am UTC.
     - cron: "23 10 */3 * *"
 
 #on: [push]
