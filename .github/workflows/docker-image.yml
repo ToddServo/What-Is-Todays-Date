@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Test directory contents
+    - name: Test initial directory contents
       run: 'ls -al'
     - name: Build the Docker image
       run: docker build --tag ubuntu22.04-luke --file dockerfile .
@@ -22,13 +22,15 @@ jobs:
       run: docker compose --file compose.yml up --detach
     - name: Run the actual command
       run: docker exec -t ubuntu-lukesmith make
-    - name: Show me what you got
-      run: 'ls -alh'
+    - name: Show me what happened
+      run: |
+        pwd
+        'ls -alh'
 
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: /home/app/index.pdf
+        path: index.pdf
         
     - name: Clear README with intro text
       run: |
@@ -59,3 +61,8 @@ jobs:
         git add -A
         git commit -m "Auto Push on $now"
         git push
+    
+    - name: Show me contents before quit
+      run: |
+        pwd
+        'ls -alh'
