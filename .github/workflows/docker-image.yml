@@ -65,4 +65,4 @@ jobs:
     - name: Show me contents before quit
       run: |
         pwd
-        'ls -alh'
+        ls -al
