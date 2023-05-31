@@ -3,11 +3,11 @@ This repository keeps track of today's date.
 * * *
  
 ## The current date:  
- 05/28/2023 
+ 05/31/2023 
   
   
  TIME IS ALSO THIS: 
   
- 04:28.48 
+ 04:29.55 
   
   
