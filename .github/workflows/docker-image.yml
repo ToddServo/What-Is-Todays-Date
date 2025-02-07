@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Test initial directory contents
       run: 'ls -al'
     - name: Build the Docker image
@@ -27,7 +27,7 @@ jobs:
         pwd
         ls -al
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
         path: index.pdf
