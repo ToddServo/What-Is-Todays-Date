@@ -12,6 +12,9 @@ on:
     # - cron: '*/5 * * * *'
     # Currently: every three days at 10:23am UTC.
     # - cron: "23 10 */3 * *"
+    # ONCE A YEAR
+     - cron: "0 0 1 1 *"
+    
 
 #on: [push]
 
