@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Check out repository code
         # https://github.com/actions/checkout/
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Clear README with intro text
         run: |
           cat README.md
