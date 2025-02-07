@@ -1,9 +1,13 @@
 # What is Today's Date?
-This repository used to keep track of today's date.
+This repository keeps track of today's date.
 * * *
  
-## The current date is no longer being watched, only the year. Cheers!
- 2025 
+## The current date:  
+ 02/07/2025 
   
- 
+  
+ TIME IS ALSO THIS: 
+  
+ 11:00.21 
+  
   
